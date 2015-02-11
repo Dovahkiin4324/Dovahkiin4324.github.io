@@ -4,4 +4,6 @@ h1{
 p{
   text-align: center;  
 }
-img
+body{
+    background: url("/PicsArt_1420913874987.jpg") no-repeat center center fixed; 
+}
