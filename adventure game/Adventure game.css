@@ -20,6 +20,15 @@ h2 {
 }
 .door2 {
     
-    float: LEFT;
+    float: left;
 
+}
+.door3{
+    
+    float:center;
+    
+}
+body{
+    
+    background: url("http://susanspiritusgallery.com/wp-content/uploads/2012/10/Cramer_Charles_DawnFogShenandoah_1994.jpg") no-repeat center center fixed;
 }
