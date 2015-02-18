@@ -1,4 +1,4 @@
-h1{
+h2{
  text-align: center;
  }
 p{
@@ -6,4 +6,8 @@ p{
 }
 body{
     background: url("/PicsArt_1420913874987.jpg") no-repeat center center fixed; 
+}
+h1{
+    color: white;
+    text-align: center;
 }

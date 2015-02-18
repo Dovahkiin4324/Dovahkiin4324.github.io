@@ -1,0 +1,25 @@
+h1 {
+   
+    text-align: center;
+
+}
+p {
+   
+    text-align: center;
+}
+
+h2 {
+    
+    text-align: center;
+
+}
+.door1 {
+    
+    float:right;
+
+}
+.door2 {
+    
+    float: LEFT;
+
+}
