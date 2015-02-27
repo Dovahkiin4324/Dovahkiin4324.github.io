@@ -1,14 +1,23 @@
 h2{
  text-align: center;
- }
+ font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+ text-decoration: underline;
+ color: white;
+}
 p{
   text-align: center;
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  text-decoration: underline;
+  color: white;
 }
 body{
-    background: url("/PicsArt_1420913874987.jpg") no-repeat center center fixed; 
+    background: url("/skullwallpaper.jpg") no-repeat center center fixed; 
 }
 h1{
     text-align: center;
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    text-decoration: underline;
+    color: white;
 }
 .clicked {
     color: darksalmon;
