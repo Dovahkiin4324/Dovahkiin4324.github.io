@@ -11,8 +11,7 @@ p{
   color: white;
 }
 body{
-    background: url("/skullwallpaper.jpg");
-    background-size: cover;
+    background: url("/skullwallpaper.jpg") no-repeat center center fixed; 
 }
 h1{
     text-align: center;
