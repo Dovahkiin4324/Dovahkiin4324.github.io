@@ -1,15 +1,15 @@
 h1 {
-   
+    color: white;
     text-align: center;
 
 }
 p {
-   
+    color: white;
     text-align: center;
 }
 
 h2 {
-    
+    color: white 
     text-align: center;
 
 }
@@ -29,6 +29,4 @@ h2 {
     
 }
 body{
-    
-    background: grey
-}
+    background: url("/scarrywall.jpg") no-repeat center center fixed;

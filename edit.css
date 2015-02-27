@@ -23,6 +23,3 @@ h1{
     margin-top: -64px;
     transition: .5s;   
 }
-.rotated {
-    transform: rotate(180deg);
-}
