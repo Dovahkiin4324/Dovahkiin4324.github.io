@@ -32,3 +32,9 @@ h1{
     margin-top: -64px;
     transition: .5s;   
 }
+a.troll{
+    
+    color: white;
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    font-size: 24px;
+}
