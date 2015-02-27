@@ -9,3 +9,26 @@ p{
 body{
     background: url("/PicsArt_1420913874987.jpg") no-repeat center center fixed; 
 }
+<<<<<<< Updated upstream
+=======
+h1{
+    color: white;
+    text-align: center;
+}
+.clicked {
+    color: darksalmon;
+}
+.logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 128px;
+    height: 128px;
+    margin-left: -64px;
+    margin-top: -64px;
+    transition: .5s;   
+}
+.rotated {
+    transform: rotate(180deg);
+}
+>>>>>>> Stashed changes
