@@ -1,23 +1,25 @@
 h2{
  text-align: center;
- font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+ font-family: 'Indie Flower', cursive;
  text-decoration: underline;
  color: white;
 }
 p{
   text-align: center;
-  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  font-family: 'Indie Flower', cursive;
   text-decoration: underline;
   color: white;
+  font-size: 25px;
 }
 body{
     background: url("/skullwallpaper.jpg") no-repeat center center fixed; 
 }
 h1{
     text-align: center;
-    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    font-family: 'Indie Flower', cursive;
     text-decoration: underline;
     color: white;
+    font-size: 25px;
 }
 .clicked {
     color: darksalmon;
