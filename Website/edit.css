@@ -1,0 +1,76 @@
+h2{
+ text-align: center;
+ font-family: 'Indie Flower', cursive;
+ text-decoration: underline;
+ color: white;
+}
+p{
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  text-decoration: underline;
+  color: white;
+  font-size: 25px;
+}
+body{
+    background: url("/skullwallpaper.jpg") no-repeat center center fixed; 
+}
+h1{
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    text-decoration: underline;
+    color: white;
+    font-size: 25px;
+}
+.clicked {
+    color: darksalmon;
+}
+.logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 128px;
+    height: 128px;
+    margin-left: -64px;
+    margin-top: -64px;
+    transition: .5s;   
+}
+a.troll{
+    
+    color: white;
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    font-size: 24px;
+}
+a.pong{
+    color: white;
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    font-size: 24px;
+   
+
+}
+.space{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
