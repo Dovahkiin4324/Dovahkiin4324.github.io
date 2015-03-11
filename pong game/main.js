@@ -50,6 +50,7 @@ this.ball.body.bounce.y = 1;
 },
 
 update: function() {
+    
   // If the right arrow is pressed, move the paddle to the right
   if (this.cursor.right.isDown) 
     this.paddle.body.velocity.x = 350;
@@ -66,10 +67,11 @@ game.physics.arcade.collide(this.paddle, this.ball);
 
 // Call the 'hit' function when the ball hit a brick
 game.physics.arcade.collide(this.ball, this.bricks, this.hit, null, this);
+},
+
     hit: function(ball, brick) {
   // When the ball hits a brick, kill the brick
   brick.kill();
-}
 }
 };
 
