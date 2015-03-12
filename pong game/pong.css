@@ -2,7 +2,11 @@ p{
     text-align: center;
   font-family: 'Indie Flower', cursive;
   text-decoration: underline;
-  color: black;
+  color: white;
   font-size: 25px;
+}
+
+body{
+    background-color: black;
 }
 
