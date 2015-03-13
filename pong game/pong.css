@@ -10,7 +10,7 @@ p{
 }
 
 #gradient {
-  background-image: linear-gradient(to right, #CCFFCC, #666699);
+  background-image: linear-gradient(to right, black, grey, white);
 }
 
 h1{
