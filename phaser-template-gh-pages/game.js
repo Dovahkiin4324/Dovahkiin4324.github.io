@@ -8,7 +8,8 @@ var mainState = {
     preload: function () {
         // This function will be executed at the beginning
         // That's where we load the game's assets
-        game.load.spritesheet('bird', 'images/bird_1.png',68,48);
+        game.load.spritesheet('bird', 'images/bird_sheet.png', 68, 48);
+        game.load.image('floor', 'images/floor.png');
     },
     
     create: function () {
@@ -22,7 +23,7 @@ var mainState = {
         // center of the image (default is top-left)
         this.sprite.anchor.setTo(0.5, 0.5);
         this.sprite.animations.add('flap', [0,1,2,1], 10, true);
-        this.sptite.animations.play('flap');
+        this.sprite.animations.play('flap');
         game.physics.enable(this.sprite);
         game.physics.arcade.gravity.y = 100;
         //Stop the birt from falling off the screen, for now
@@ -30,7 +31,9 @@ var mainState = {
         //Keep space from scrolling the page
         game.input.keyboard.addKeyCapture([Phaser.Keyboard.SPACEBAR]);
         // Change background color to a gray color
-        game.stage.backgroundColor = 'back.png';
+        game.stage.backgroundColor = '#999999';
+        this.floor = game.add.tileSprite(0, game.world.height - 40, game.world.width, game.world.height, 'floor');
+        this.floor.tileScale.set(0.5);
     },
     
     update: function () {
@@ -39,6 +42,8 @@ var mainState = {
         if (game.input.keyboard.justPressed(Phaser.Keyboard.SPACEBAR)) {
             this.sprite.body.velocity.y = -100;
         }
+        // Rotate the sprite by 1 degrees
+        
     }
 };
 
