@@ -25,7 +25,7 @@ var mainState = {
         this.sprite.animations.add('flap', [0,1,2,1], 10, true);
         this.sprite.animations.play('flap');
         game.physics.enable(this.sprite);
-        game.physics.arcade.gravity.y = 100;
+        game.physics.arcade.gravity.y = 500;
         //Stop the birt from falling off the screen, for now
         this.sprite.body.collideWorldBounds = true;
         //Keep space from scrolling the page
@@ -34,15 +34,26 @@ var mainState = {
         game.stage.backgroundColor = '#999999';
         this.floor = game.add.tileSprite(0, game.world.height - 40, game.world.width, game.world.height, 'floor');
         this.floor.tileScale.set(0.5);
+        this.obstacles = game.add.group();
+        this.obstacles.add(this.floor);
+        game.physics.enable(this.floor);
+        this.floor.body.immovable = true;
+        this.floor.body.allowGravity = false;
     },
     
     update: function () {
         // This function is called 60 times per second
         // It contains the game's logic
         if (game.input.keyboard.justPressed(Phaser.Keyboard.SPACEBAR)) {
-            this.sprite.body.velocity.y = -100;
+            this.sprite.body.velocity.y = -350;
         }
         // Rotate the sprite by 1 degrees
+        this.floor.tilePosition.x -= 4;
+        
+        if (game.physics.arcade.collide(this.sprite, this.obstacles)) {
+            console.log('Game over man, game over!');
+            game.paused = true;
+        }
         
     }
 };
