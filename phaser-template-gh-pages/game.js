@@ -1,6 +1,39 @@
 /*global Phaser*/
 /*jslint sloppy:true, browser: true, devel: true, eqeq: true, vars: true, white: true*/
 var game;
+function makePipePair(group, offsetX, newOffsetX) {
+    var top = group.create(0, 0, 'pipe_top');
+    var bottom = group.create(0, 0, 'pipe_bottom');
+    top.anchor.set(0, 1);
+    var spacing = 100;
+    function addPhysics(pipe) {
+        game.physics.enable(pipe);
+        pipe.body.immovable = true;
+        pipe.body.allowGravity = false;
+        pipe.body.velocity.x = -200;
+    }
+    function positionPipes(top, bottom) {
+        var center = game.rnd.integerInRange(100, game.world.height - 100);
+        var left = game.world.width;
+        top.x = left;
+        bottom.x = left;
+        top.y = center - spacing;
+        bottom.y = center + spacing;
+    }
+    addPhysics(top);
+    addPhysics(bottom);
+    positionPipes(top, bottom);
+    top.x += offsetX;
+    bottom.x += offsetX;
+    top.checkWorldBounds = true;
+    top.events.onOutOfBounds.add(function () {
+        if (top.x < 0) {
+            positionPipes(top, bottom);
+            top.x += newOffsetX;
+            bottom.x += newOffsetX;
+        }
+    });
+}
 
 var mainState = {
     // Here we add all the functions we need for our state
@@ -10,6 +43,9 @@ var mainState = {
         // That's where we load the game's assets
         game.load.spritesheet('bird', 'images/bird_sheet.png', 68, 48);
         game.load.image('floor', 'images/floor.png');
+        game.load.image('pipe_top', 'images/pipe_top.png');
+        game.load.image('pipe_bottom', 'images/pipe_bottom.png');
+        game.load.image('back', 'image/back.png');
     },
     
     create: function () {
@@ -39,13 +75,18 @@ var mainState = {
         game.physics.enable(this.floor);
         this.floor.body.immovable = true;
         this.floor.body.allowGravity = false;
+        var pipeSpacing = 400;
+        var numPipes = 10;
+        for (var i = 0; i < numPipes; i += 1) {
+            makePipePair(this.obstacles, i * pipeSpacing, pipeSpacing * numPipes - game.world.width);
+        }
     },
     
     update: function () {
         // This function is called 60 times per second
         // It contains the game's logic
         if (game.input.keyboard.justPressed(Phaser.Keyboard.SPACEBAR)) {
-            this.sprite.body.velocity.y = -350;
+            this.sprite.body.velocity.y = -200;
         }
         // Rotate the sprite by 1 degrees
         this.floor.tilePosition.x -= 4;
